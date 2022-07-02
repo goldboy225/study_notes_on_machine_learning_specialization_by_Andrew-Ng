@@ -1,0 +1,47 @@
+Overview of Machine Learning
+
+# Week 1
+
+1. Current applications and concerned applications
+    1. Current applications: google page ranking, labelled picture in instagram, recognizing voice and text and recommendation, spam email etc.
+    2. Concerned application: turbine power optimization in climate change, AI support medical diagnose, land AI with computer vision to find the defect of the product off the assembly line.
+
+Let’s join the journey of the AI together.
+
+1. Applications of machine learning
+    1. Why popular for ML? Like find the shortest path from a to b in GPS
+    2. Artificial General Intelligence (AGI)
+2. Supervised vs. Unsupervised Machine Learning
+    1. What’s machine learning?
+        1. In 1959 Arthur Samuel “Field of study that gives computers ability to learn without explicitly programmed.”
+        2. Supervised learning is fast developed and mostly used, while unsupervised learning also has its application domain area.
+        3. How to perfectly apply the tools(supervised, unsupervised and reinforcement learning) to  various applications to avoid ending up with no progress after more than 6 month work for significant proportion of the AI practitioners.
+    2. Supervised learning part 1
+        1. 99% is supervised learning type.
+        2. Take one case of house price prediction as example, using regression which is one type of supervised learning. 
+        3. Given the X mapping to Y, or answer, or data with label, which is supervised learning. More cases, like email → spam or not (0/1) | spam application, voice → text transcript | (voice recognition), ad and user info → click or not (0/1) | ad application, image and info from radar → position of vehicle | (autonomous vehicle), phone image → has defect, rent or scratch or not (0/1) | assembly line application etc.
+        4. The key is how to select the appropriate model systematically, such as line, curve, or even more complex model to fit to the data.
+    3. Supervised learning part 2
+        1. Take breast cancer prediction as an example, whether the lump is malignant or benign, which is two-type classification.
+        2. You can plot the data into the graph to see the distribution of the data.
+        3. Besides, there are more than one inputs for x, such as size of lump, also age and more variables to mapping y, which can be used for the model to fit to the data.
+        4. Moreover, there are more categories to be classified, there are more subtypes in malignant state.
+        5. To recap, two main types in supervised learning, one is regression to predict the number from infinite numbers, the other one is classification to predict benign or malignant, or even more than two categories.
+    
+    d. Unsupervised learning part 1
+    
+    1. no mapping Y, no label, or no answer like data used in supervised learning in data.
+    2. it’s still super as supervised.
+    3. Trying to find out interesting from the data, or any structure or pattern from unlabeled data.
+    4. Take a news from google search, with the word pandas…twins…zoo the title of one news, google automatically cluster related news together with the keyword pandas…twins…zoo in the title.
+    5. Take another genetic or DNA data as an example, every impressive, each row stands for various genes, while each column means individual person. Unsupervised learning automatically clusters individuals into different types without any label y.
+    6. Take customer group of the communities as an example, unsupervised learning clusters different customer group or make the customer into different clusters, so that the community can serve for their customer with more precise services.
+    7. So, data only comes from x with label y, algorithms try to find the structure or pattern of the data. Clustering is one main type of algorithms in supervised learning.
+    
+    e. Unsupervised learning part 2
+    
+    1. Three types of algorithms, one is clustering to cluster data points into groups, the other one is anomaly detection to detect unusual data points (fraud transaction in financial system), the third one is dimensionality reduction to compress large size data into small one but loss as less information as possible.
+    2. A question to answer to enhance the understanding of unsupervised and supervised learning, email spam filter → super, google news group → unsuper, diabetes or not → super, customer group to figure out the market segment → unsuper.
+    3. Exciting tool, that’s jupyter notebook.
+    
+    f.  Jupyter notebooks
