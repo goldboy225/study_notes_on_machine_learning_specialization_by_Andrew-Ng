@@ -1,0 +1,54 @@
+3. Regression model
+
+    a. Linear regression model part 1
+        1. Take house size and price prediction as an example.
+        2. Supervised learning is learning the data with “right answer” to build the model.
+        3. Regression model means infinite outputs with a huge number of numbers, such as predict the prices of house based on the size or more variables. Linear regression model is one of the regression models which involves more complex model types.
+        4. Classification model means finite outputs with a small number of categories, such as cat or dog in computer vision recognization, disease or not in medical diagnose.
+        5. It’s better to plot the data into the chart, then to read and check the data mapping between the table and chart.
+        6. There are many machine learning terminologies which are widely accepted in AI area. such as, x = input variable or input feature, y = output variable or output target, (x, y) means one of sample data, m = number of rows in the data, x(i) means the ith sample data, (x(1), y(1)) is the first row sample data among the dataset.
+        
+    b. Linear regression model part 2
+        1. Standard machine learning framework is presented, data(features, targets) → learning algorithm - f(x), f(x) = wx + b when in the linear regression model, trying to learn w and b, then x→f(x)→^y, means feature → model → prediction, which is the estimation of y(real target).
+        2. f(x) can be denoted as hypothesis(classical course of machine learning by Andrew Ng), or function, or model. 
+        3. A simple case is linear regression with one variable, or namely univariate linear regression, which means the model with just one variable.
+        4. Jupyter notebook time.
+            1. Linear regression model with one variable using jupyter notebook.
+            2. import numpy and matlibplot lib.
+            3. Create np.array for the training examples.
+            4. Check m, the number of training examples.
+            5. Check the x(i), y(i), the value of training examples.
+            6. Plotting the data. plt.scatter, title, xlabel, ylabel and show.
+            7. Adjust the model, specifically the weight w and bias b in f(x) = wx+b linear model, firstly just set the value manually, such as w=100, b=100.
+            8. Plot our model prediction compared with actual target values in the same chart.
+            9. The results predicted by the proposed model do not fit the data, so we need adjust the w and b again, to make model fit to the data.
+            10. Set the w=200 and b=100, check the output of the model and compare the output predictions with the actual targets.
+            11. Now the improved model fits to the data, congratulations!
+    
+    c. Cost function formula
+    1. Start from linear model function f(x) =wx+b, from the intuition on chart, w means slope of the line, while b means the interception.
+    2. Why need cost function? Because we need to how close of the prediction of the hat y is compared with the actual target y. So to form following formula to evaluate the result of the the prediction:
+        1. ^y - y, to evaluate the error.
+        2. ^y (i) - y (i), to evaluate the error for i th data.
+        3.  (^y (i) - y (i)) upper 2, to evaluate the absolute error.
+        4. Sum(from 1 to m) (^y (i) - y (i)) upper 2, to evaluate sum of the error o.
+        5. 1/m Sum(from 1 to m) (^y (i) - y (i)) upper 2, to avoid the error keep increasing with m, so divided by m by convention.
+        6. 1/2 1/m Sum(from 1 to m) (^y (i) - y (i)) upper 2, divided by 2, to make the following computation more neatly.
+    3. Then try to find the intuition of evaluation of the cost function.
+    
+    d. Cost function intuition
+    1. To recap the idea from f(x) = wx+b function or hypothesis, w and b parameters for the model, cost function J(w, b) = 1/2 1/m Sum(from 1 to m) (^y (i) - y (i)) upper 2, equals 1/2 1/m Sum(from 1 to m) (f(x (i) ) - y (i)) upper 2, also equals to 1/2 1/m Sum(from 1 to m) (f(wx (i) + b) - y (i)) upper 2. The purpose is to minimize the cost function J(w,b).
+    2. Do intuition with two chart, one is model function f(x), while other one is cost function J(w,b). To make it easy from intuition, make b = 0, which means cost function is J(w).
+    3. Take some cases for w, such as w=1, 0, 0.5, and 1.5 to calculate the results of model function f(x) and cost function J(w), then plot the cross on both charts. We can easily get the intuition of how the cost function value of J(w) changes with the corresponding changes of model function value of f(x), when setting different value to w.
+    
+    e. Visualization cost function
+    1. To recap, four ideas, function model f(x), parameters w and b, cost function J(w, b), objective minimize J(w, b).
+    2. Back to the real case on house price prediction, x = size of feet, while y = price of house. b added back to the function f(x), so with the changes on cost function J(w, b).
+    3. Use contour tool to illustrate 3d chart, with w, b and J(w, b). It looks like a soup bowl or hammock. Take mountain Fuji as an example for explanation of contour graph.
+    4. Then take three graphs, one for function f(x), one for cost function J(w, b) using contour graph, the 3rd one using mountain Fuji under contour model, to explain the relationship among them.
+    
+    f. Visualization examples
+    1. Based on the case of house price prediction, try to manually set different values of w and b, to see what’s the result of three graphs and the relationship among them.
+    2. Four times trying, the bad, worse, better and relatively perfect values of w and b. check the f(x) in graph and j(w, b) in contour graph.
+    3. Followed with jupyter notebook exercises to enhance the knowledge you’ve just learned.
+    4. Because it does not make sense to find the values of w and b manually, which is infinite operation and time consuming, so the algorithm by automatically finding the optimum w and b is necessary, particularly for more complex model functions. Then gradient descend algorithm as one of the optimizing algorithm for cost function ,is introduced when reducing variance, to find the optimum w and b, in order to minimize cost function J(w, b).
